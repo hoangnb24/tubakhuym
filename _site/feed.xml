@@ -1,67 +1,106 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-11-26T09:46:59+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Tu Ba Khuym</title><subtitle>A place where I share my documents and knowledge</subtitle><author><name>Tu Ba Khuym</name></author><entry><title type="html">Welcome to My Blog</title><link href="http://localhost:4000/blog/welcome-to-my-blog/" rel="alternate" type="text/html" title="Welcome to My Blog" /><published>2024-11-26T00:00:00+07:00</published><updated>2024-11-26T00:00:00+07:00</updated><id>http://localhost:4000/blog/welcome-to-my-blog</id><content type="html" xml:base="http://localhost:4000/blog/welcome-to-my-blog/"><![CDATA[<p>Welcome to my blog! This is where I’ll be sharing my knowledge, experiences, and insights.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/tubakhuym/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/tubakhuym/" rel="alternate" type="text/html" /><updated>2024-11-26T17:05:11+07:00</updated><id>http://localhost:4000/tubakhuym/feed.xml</id><title type="html">Tu Ba Khuym</title><subtitle>A place where I share my documents and knowledge</subtitle><author><name>Tu Ba Khuym</name></author><entry><title type="html">Local Development Guide</title><link href="http://localhost:4000/tubakhuym/blog/2024/11/26/local-development-guide.html" rel="alternate" type="text/html" title="Local Development Guide" /><published>2024-11-26T00:00:00+07:00</published><updated>2024-11-26T00:00:00+07:00</updated><id>http://localhost:4000/tubakhuym/blog/2024/11/26/local-development-guide</id><content type="html" xml:base="http://localhost:4000/tubakhuym/blog/2024/11/26/local-development-guide.html"><![CDATA[<h1 id="local-development-guide">Local Development Guide</h1>
+
+<p>This guide will help you set up your local development environment for contributing to this blog.</p>
+
+<h2 id="prerequisites">Prerequisites</h2>
+
+<p>Before you begin, ensure you have the following tools installed on your macOS system:</p>
+
+<h3 id="1-install-homebrew">1. Install Homebrew</h3>
+
+<p>If you haven’t installed Homebrew yet, run the following command:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/bin/bash <span class="nt">-c</span> <span class="s2">"</span><span class="si">$(</span>curl <span class="nt">-fsSL</span> https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span class="si">)</span><span class="s2">"</span>
+</code></pre></div></div>
+
+<h3 id="2-install-ruby">2. Install Ruby</h3>
+
+<p>Install Ruby using Homebrew:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew <span class="nb">install </span>ruby
+</code></pre></div></div>
+
+<h3 id="3-configure-ruby-path">3. Configure Ruby Path</h3>
+
+<p>Add Ruby to your PATH by adding these lines to your shell configuration file:</p>
+
+<p>For Zsh (<code class="language-plaintext highlighter-rouge">~/.zshrc</code>):</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">"/opt/homebrew/opt/ruby/bin:</span><span class="nv">$PATH</span><span class="s2">"</span>
+</code></pre></div></div>
+
+<p>Then reload your configuration:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">source</span> ~/.zshrc
+</code></pre></div></div>
+
+<h3 id="4-verify-installation">4. Verify Installation</h3>
+
+<p>Ensure Ruby is properly installed:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>which ruby  <span class="c"># Should point to Homebrew's Ruby</span>
+ruby <span class="nt">-v</span>    <span class="c"># Should show Ruby version 3.x.x</span>
+</code></pre></div></div>
+
+<h2 id="blog-setup">Blog Setup</h2>
+
+<p>Follow these steps to set up the blog locally:</p>
+
+<h3 id="1-clone-repository">1. Clone Repository</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone <span class="o">[</span>repository-url]
+<span class="nb">cd</span> <span class="o">[</span>repository-name]
+</code></pre></div></div>
+
+<h3 id="2-install-dependencies">2. Install Dependencies</h3>
+
+<p>Install Bundler and project dependencies:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem <span class="nb">install </span>bundler
+bundle <span class="nb">install</span>
+</code></pre></div></div>
+
+<h3 id="3-start-development-server">3. Start Development Server</h3>
+
+<p>Launch the Jekyll development server:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">exec </span>jekyll serve
+</code></pre></div></div>
+
+<p>The blog will be available at <a href="http://localhost:4000">http://localhost:4000</a></p>
+
+<h2 id="troubleshooting-guide">Troubleshooting Guide</h2>
+
+<p>If you encounter any issues during setup, try these solutions:</p>
+
+<h3 id="common-issues">Common Issues</h3>
+
+<ol>
+  <li><strong>Permission Errors</strong>
+    <ul>
+      <li>Verify you’re using Homebrew’s Ruby instead of the system Ruby</li>
+      <li>Check Ruby path with <code class="language-plaintext highlighter-rouge">which ruby</code></li>
+    </ul>
+  </li>
+  <li><strong>Bundler Failures</strong>
+    <ul>
+      <li>Remove <code class="language-plaintext highlighter-rouge">Gemfile.lock</code>: <code class="language-plaintext highlighter-rouge">rm Gemfile.lock</code></li>
+      <li>Reinstall dependencies: <code class="language-plaintext highlighter-rouge">bundle install</code></li>
+    </ul>
+  </li>
+  <li><strong>Gem Issues</strong>
+    <ul>
+      <li>Reset all gems: <code class="language-plaintext highlighter-rouge">gem pristine --all</code></li>
+    </ul>
+  </li>
+</ol>]]></content><author><name>Tu Ba Khuym</name></author><category term="blog" /><category term="setup" /><category term="development" /><category term="guide" /><summary type="html"><![CDATA[Local Development Guide]]></summary></entry><entry><title type="html">Welcome to My Blog</title><link href="http://localhost:4000/tubakhuym/2024/01/26/welcome-to-my-blog.html" rel="alternate" type="text/html" title="Welcome to My Blog" /><published>2024-01-26T22:00:00+07:00</published><updated>2024-01-26T22:00:00+07:00</updated><id>http://localhost:4000/tubakhuym/2024/01/26/welcome-to-my-blog</id><content type="html" xml:base="http://localhost:4000/tubakhuym/2024/01/26/welcome-to-my-blog.html"><![CDATA[<p>Welcome to my blog! This is where I’ll be sharing my experiences and knowledge about server engineering, mobile game development, and various technical topics.</p>
 
 <h2 id="what-to-expect">What to Expect</h2>
 
-<p>In this blog, you’ll find:</p>
+<p>I’ll be writing about:</p>
 <ul>
-  <li>Technical tutorials</li>
-  <li>Knowledge sharing</li>
-  <li>Personal experiences</li>
-  <li>Tips and tricks</li>
+  <li>Server architecture and optimization</li>
+  <li>Mobile game development</li>
+  <li>Performance tuning</li>
+  <li>Tools and automation</li>
+  <li>Best practices and lessons learned</li>
 </ul>
 
-<h2 id="stay-connected">Stay Connected</h2>
-
-<p>Feel free to follow me on GitHub and stay tuned for more content!</p>]]></content><author><name>Tu Ba Khuym</name></author><category term="blog" /><category term="welcome" /><category term="first post" /><summary type="html"><![CDATA[Welcome to my blog! This is where I’ll be sharing my knowledge, experiences, and insights.]]></summary></entry><entry><title type="html">Local Development Guide</title><link href="http://localhost:4000/guide/local-development-guide/" rel="alternate" type="text/html" title="Local Development Guide" /><published>2024-11-26T00:00:00+07:00</published><updated>2024-11-26T00:00:00+07:00</updated><id>http://localhost:4000/guide/local-development-guide</id><content type="html" xml:base="http://localhost:4000/guide/local-development-guide/"><![CDATA[<h2 id="prerequisites">Prerequisites</h2>
-
-<ol>
-  <li><strong>Install Homebrew</strong> (if not already installed)
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/bin/bash <span class="nt">-c</span> <span class="s2">"</span><span class="si">$(</span>curl <span class="nt">-fsSL</span> https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span class="si">)</span><span class="s2">"</span>
-</code></pre></div>    </div>
-  </li>
-  <li><strong>Install Ruby via Homebrew</strong>
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew <span class="nb">install </span>ruby
-</code></pre></div>    </div>
-  </li>
-  <li><strong>Add Ruby to your PATH</strong>
-Add this to your <code class="language-plaintext highlighter-rouge">~/.zshrc</code> (for Zsh) or <code class="language-plaintext highlighter-rouge">~/.bash_profile</code> (for Bash):
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">"/opt/homebrew/opt/ruby/bin:</span><span class="nv">$PATH</span><span class="s2">"</span>
-</code></pre></div>    </div>
-    <p>Then reload your shell configuration:</p>
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">source</span> ~/.zshrc  <span class="c"># or source ~/.bash_profile for Bash</span>
-</code></pre></div>    </div>
-  </li>
-  <li><strong>Verify Ruby Installation</strong>
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>which ruby  <span class="c"># Should point to Homebrew's Ruby, not system Ruby</span>
-ruby <span class="nt">-v</span>    <span class="c"># Should show Ruby version 3.x.x</span>
-</code></pre></div>    </div>
-  </li>
-</ol>
-
-<h2 id="setting-up-the-blog">Setting up the Blog</h2>
-
-<ol>
-  <li><strong>Clone this repository</strong>
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone <span class="o">[</span>repository-url]
-<span class="nb">cd</span> <span class="o">[</span>repository-name]
-</code></pre></div>    </div>
-  </li>
-  <li><strong>Install Bundler and Dependencies</strong>
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem <span class="nb">install </span>bundler
-bundle <span class="nb">install</span>
-</code></pre></div>    </div>
-  </li>
-  <li><strong>Start the Jekyll Server</strong>
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">exec </span>jekyll serve
-</code></pre></div>    </div>
-  </li>
-  <li>Open http://localhost:4000 in your browser</li>
-</ol>
-
-<h2 id="troubleshooting">Troubleshooting</h2>
-
-<ul>
-  <li>If you see permission errors, make sure you’re using Homebrew’s Ruby and not the system Ruby</li>
-  <li>If bundler fails, try removing <code class="language-plaintext highlighter-rouge">Gemfile.lock</code> and running <code class="language-plaintext highlighter-rouge">bundle install</code> again</li>
-  <li>For any gem-related issues, try <code class="language-plaintext highlighter-rouge">gem pristine --all</code></li>
-</ul>]]></content><author><name>Tu Ba Khuym</name></author><category term="Guide" /><category term="setup" /><category term="development" /><summary type="html"><![CDATA[Prerequisites]]></summary></entry></feed>
+<p>Stay tuned for more content!</p>]]></content><author><name>Tu Ba Khuym</name></author><summary type="html"><![CDATA[Welcome to my blog! This is where I’ll be sharing my experiences and knowledge about server engineering, mobile game development, and various technical topics.]]></summary></entry></feed>

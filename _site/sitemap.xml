@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/blog/welcome-to-my-blog/</loc>
+<loc>http://localhost:4000/tubakhuym/2024/01/26/welcome-to-my-blog.html</loc>
+<lastmod>2024-01-26T22:00:00+07:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/tubakhuym/blog/2024/11/26/local-development-guide.html</loc>
 <lastmod>2024-11-26T00:00:00+07:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/guide/local-development-guide/</loc>
-<lastmod>2024-11-26T00:00:00+07:00</lastmod>
+<loc>http://localhost:4000/tubakhuym/about.html</loc>
 </url>
 <url>
-<loc>http://localhost:4000/</loc>
+<loc>http://localhost:4000/tubakhuym/contact.html</loc>
+</url>
+<url>
+<loc>http://localhost:4000/tubakhuym/posts/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/tubakhuym/</loc>
 </url>
 </urlset>
