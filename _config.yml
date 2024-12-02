@@ -22,3 +22,8 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-remote-theme
+
+# Add these favicon configurations
+favicon:
+  src: /assets/favicon/favicon.ico  # Path to your favicon.ico
+  apple_touch_icon: /assets/favicon/apple-touch-icon.png  # Path to apple-touch-icon.png
