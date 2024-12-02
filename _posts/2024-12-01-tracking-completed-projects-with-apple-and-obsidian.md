@@ -3,7 +3,7 @@ layout: post
 title: "Tracking Completed Projects with Apple Calendar and Obsidian"
 subtitle: "Automating task tracking between Obsidian and Apple Calendar"
 date: 2024-12-01
-# background: '/img/posts/01.jpg'  # You can update this to a relevant background image
+# background: '/img/posts/01.png'  # You can update this to a relevant background image
 ---
 
 <iframe 

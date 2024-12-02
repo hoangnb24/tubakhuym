@@ -3,7 +3,7 @@ layout: post
 title: "Welcome to My Blog"
 subtitle: "A place to share knowledge and experiences"
 date: 2024-01-26 10:00:00 -0500
-background: '/img/posts/01.jpg'
+background: '/img/posts/01.png'
 ---
 
 Welcome to my blog! This is where I'll be sharing my experiences and knowledge about server engineering, mobile game development, and various technical topics.
